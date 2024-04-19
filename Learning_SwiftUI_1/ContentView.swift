@@ -10,12 +10,32 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            MapKitView()
+                .frame(height: 300)
+            CircularImageView()
+                .offset(y: -125)
+                .padding(.bottom, -125)
+            VStack(alignment: .leading) {
+                Text("Surat")
+                    .font(.title)
+                    .fontWeight(.medium)
+                HStack {
+                    Text("City of overbridges")
+                    Spacer()
+                    Text("Gujarat")
+                }
+                .font(.subheadline)
+                .foregroundStyle(.gray)
+                Divider()
+                Text("About Surat")
+                    .font(.title3)
+                Text("Descriptive text goes here.")
+                    .font(.callout)
+                    .foregroundStyle(Color(uiColor: .darkGray))
+            }
+            .padding()
+            Spacer()
         }
-        .padding()
     }
 }
 
